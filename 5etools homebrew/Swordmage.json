@@ -1,0 +1,3082 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "SwMage",
+				"abbreviation": "SwMage",
+				"full": "Swordmage",
+				"url": "https://drive.google.com/file/d/19Rux2jQrSnm_vsslyFuUcs_RzJjyc0-X/view",
+				"authors": [
+					"Joe Costa",
+					"Nate Wilson"
+				],
+				"convertedBy": [
+					"Nate Wilson"
+				],
+				"dateReleased": "2020-03-09"
+			}
+		],
+		"dateAdded": 1580934477,
+		"dateLastModified": 1585045164
+	},
+	"class": [
+		{
+			"name": "Swordmage",
+			"source": "SwMage",
+			"fluff": [
+				{
+					"type": "section",
+					"name": "Swordmage",
+					"entries": [
+						"The halfling thief starts to panic as an ogre finds its hiding spot. As the ogre slams its club down, a swordsman appears with a flash of blue light to block the club with his glowing sword. Between him and his halfling friend, they easily dispatch the suprised ogre.",
+						"A menacing dragon breathes fire at an intruder, but the lightly armored elf just smiles back. She strides through the fire, a reddish, magical barrier protecting her from the worst of the flames. Before the dragon can react, her twin blades have penetrated its scales.",
+						"As the bandit's blade threatens to cut the pale warrior in half, the warrior twists his hand and mutters an arcane word of power. The bandit cries out in pain, and with a chilling smile, the warrior plunges his blade into the bandit.",
+						"These magical warriors are swordmages: combatants that blend magic and martial might. Whether a swormdage specializes in necromancy, elemental manipulation, abjuration, or something entirely different, they always make use of magical power to aid them in melee combat.",
+						{
+							"type": "entries",
+							"name": "A Mystical Bond",
+							"entries": [
+								"A swordmage forges a bond with their weapon, providing a conduit for their arcane prowess. As their bonded weapon is not only their tool in combat, but also a source of magic, swordmages treat their weapon with the the utmost care. Choosing a weapon is an important step that is often dictated by their weapon training or personal style: although the name implies sword wielders, some swordmages choose other weapons, such as axes, spears, or flails."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Creating a Swordmage",
+							"entries": [
+								"As you build your swordmage, carefully consider three elements of your character's background: Where were they trained, what magic interests them the most, and what type of weapon they favor. Some large cities, especially among more magical cultures such as the elves, might have institutions that train aspiring swordmages. Perhaps you were a soldier selected to learn magic to help your cause win a war. Maybe you apprenticed with a swordmage mentor who taught you all they knew and now are striking out on your own.",
+								"Furthermore, how does your swordmage fight? Do you strike quickly with dual blades, or intimidate your enemies with a massive greataxe? The weapon (or weapons) you bond with is an important choice. The weapon could be a family heirloom, or perhaps it was passed down from a master who taught you everything you know."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Quick Build",
+							"entries": [
+								"You can make a swordmage quickly by following these suggestions. First, your highest ability score should be Dexterity or Strength, depending on whether you want to focus on large melee weapons or on finesse weapons. Your next highest score should be Intelligence, as it determines the power of your magical ability. Second, choose the soldier or scholar background."
+							]
+						}
+					]
+				}
+			],
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"con",
+				"int"
+			],
+			"spellcastingAbility": "int",
+			"startingProficiencies": {
+				"armor": [
+					"light",
+					"medium"
+				],
+				"weapons": [
+					"simple",
+					"martial"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"acrobatics",
+								"athletics",
+								"arcana",
+								"history",
+								"investigation",
+								"insight"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon}",
+					"(a) {@item scale mail|phb} or (b) {@item leather armor|phb}",
+					"(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}"
+				],
+				"goldAlternative": "{@dice 5d4×10|5d4 × 10|Starting Gold}"
+			},
+			"multiclassing": {
+				"requirements": {
+					"int": 13,
+					"or": [
+						{
+							"str": 13,
+							"dex": 13
+						}
+					]
+				},
+				"proficienciesGained": {
+					"armor": [
+						"light",
+						"medium"
+					],
+					"weapons": [
+						"simple",
+						"martial"
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"Aegis Uses",
+						"Aegis Die",
+						"{@filter Cantrips Known|spells|level=0|class=Swordmage (SwMage)}",
+						"{@filter Spells Known|spells|class=Swordmage (SwMage)}"
+					],
+					"rows": [
+						[0, "1d4", 2, 2],
+						[2, "1d4", 2, 3],
+						[3, "1d4", 2, 4],
+						[3, "1d4", 2, 4],
+						[3, "1d6", 2, 5],
+						[4, "1d6", 2, 5],
+						[4, "1d6", 2, 6],
+						[4, "1d6", 2, 6],
+						[4, "1d6", 2, 7],
+						[4, "1d6", 3, 7],
+						[4, "1d8", 3, 8],
+						[5, "1d8", 3, 8],
+						[5, "1d8", 3, 9],
+						[5, "1d8", 4, 9],
+						[5, "1d8", 4, 10],
+						[5, "1d8", 4, 10],
+						[6, "1d10", 4, 11],
+						[6, "1d10", 4, 11],
+						[6, "1d10", 4, 12],
+						["Unlimited", "1d10", 4, 12]
+					]
+				},
+				{
+					"title": "Spell Slots per Spell Level",
+					"colLabels": [
+						"{@filter 1st|spells|level=1|class=Swordmage (SwMage)}",
+						"{@filter 2nd|spells|level=2|class=Swordmage (SwMage)}",
+						"{@filter 3rd|spells|level=3|class=Swordmage (SwMage)}",
+						"{@filter 4th|spells|level=4|class=Swordmage (SwMage)}",
+						"{@filter 5th|spells|level=5|class=Swordmage (SwMage)}"
+					],
+					"rows": [
+						[2,0,0,0,0],
+						[2,0,0,0,0],
+						[3,0,0,0,0],
+						[3,0,0,0,0],
+						[4,2,0,0,0],
+						[4,2,0,0,0],
+						[4,3,0,0,0],
+						[4,3,0,0,0],
+						[4,3,2,0,0],
+						[4,3,2,0,0],
+						[4,3,3,0,0],
+						[4,3,3,0,0],
+						[4,3,3,1,0],
+						[4,3,3,1,0],
+						[4,3,3,2,0],
+						[4,3,3,2,0],
+						[4,3,3,3,1],
+						[4,3,3,3,1],
+						[4,3,3,3,2],
+						[4,3,3,3,2]
+					]
+				}
+			],
+			"classFeatures": [
+				[
+					{
+						"type": "entries",
+						"name": "Arcane Weapon",
+						"entries": [
+							"At 1st level, you learn a ritual that creates a magical bond between yourself and one weapon. You perform the ritual over the course of 1 hour, which can be done during a short rest. The weapon must be within your reach throughout the ritual, at the conclusion of which you touch the weapon and forge the bond.",
+							"Once you have bonded a weapon to yourself, you can't be disarmed of that weapon unless you are incapacitated. If it is on the same plane of existence, you can summon that weapon as an action, causing it to teleport instantly to your hand.",
+							"You can have up to two bonded weapons. If you attempt to bond with a third weapon, you must first break the bond with one of the other two.",
+							"If you are wielding your Arcane Weapon in one hand, and your other hand is free of a weapon or shield, you gain a magical +1 bonus to your AC. You do not gain this bonus if your Arcane Weapon has the two-handed property."
+						]
+					},
+					{
+						"name": "Spellcasting",
+						"entries": [
+							"At 1st level, you learn to use your magical studies to cast spells, much as a wizard does. See {@book chapter 10|PHB|10} of the PHB for the general rules of spellcasting.",
+							{
+								"type": "entries",
+								"name": "Cantrips",
+								"entries": [
+									"You learn two cantrips from the {@filter swordmage spell list|spells|class=swordmage (SwMage)}. You learn a third swordmage cantrip of your choice at 10th level, and a fourth at 14th level."
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Spell Slots",
+								"entries": [
+									"The Swordmage table shows how many spell slots you have to cast your swordmage spells. To cast one of your swordmage spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest."
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Spells Known of 1st Level and Higher",
+								"entries": [
+									"You know two 1st-level spells of your choice from the swordmage spell list.",
+									"The Spells Known column of the Swordmage table shows when you learn more swordmage spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.",
+									"Additionally, when you gain a level in this class, you can choose one of the swordmage spells you know and replace it with another spell from the swordmage spell list, which also must be of a level for which you have spell slots."
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Spellcasting Ability",
+								"entries": [
+									"Intelligence is your spellcasting ability for your swordmage spells, since their magic reflects your arcane studies. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a swordmage spell you cast and when making an attack roll with one.",
+									{
+										"type": "abilityDc",
+										"name": "Spell",
+										"attributes": [
+											"int"
+										]
+									},
+									{
+										"type": "abilityAttackMod",
+										"name": "Spell",
+										"attributes": [
+											"int"
+										]
+									}
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Spellcasting Focus",
+								"entries": [
+									"You can use your Arcane Weapon as a spellcasting focus for your swordmage spells."
+								]
+							}
+						]
+					}
+				],
+				[
+					{
+						"name": "Aegis",
+						"entries": [
+							"Starting at 2nd level, you can use your Arcane Weapon to empower yourself with a magical dweomer called an Aegis. You can activate your Aegis as a bonus action.",
+							"Your Aegis Die is a d4. It increases to a d6 at 5th level, a d8 at 11th level, and a d10 at 17th level, as shown on the swordmage table.",
+							"When you activate your Aegis, choose one of the following effects:",
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Aegis of Shielding",
+										"entries": [
+											"While this Aegis is active, you can shield yourself from harm. When you take damage, you can use your reaction to reduce the damage taken by your Aegis Die plus half your Swordmage level (rounded down)."
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Aegis of Assault",
+										"entries": [
+											"When you activate this Aegis, you can teleport up to 15 feet to an unoccupied space that you can see. On later turns while this Aegis is active, you can use your bonus action to teleport the same distance. After teleporting with this Aegis, the first melee weapon attack you make with your Arcane Weapon before the end of the turn deals an additional 1d4 force damage. At higher levels in this class, the teleportation distance improves with your Aegis Die, increasing 20 feet at 6th level, 25 feet at 11th level, and 30 feet at 17th level."
+										]
+									}
+								]
+							},
+							"Your Aegis lasts for 1 minute or until you fall unconscious or you choose to end it (no action required). Once you have used your Aegis the maximum number of times for your swordmage level, you must finish a long rest before you can use your Aegis again. You may use it 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th, as shown on the swordmage table."
+						]
+					},
+					{
+						"name": "Enspell Blade",
+						"entries": [
+							"Starting at 2nd level, after casting a spell of 1st level or higher, you siphon the residual energy from the spell onto your weapon. Until the end of your next turn, your next weapon attack that hits deals an extra 1d6 force damage per spell slot level, up to a maximum of 4d6."
+						]
+					}
+				],
+				[
+					{
+						"name": "Relics of War",
+						"entries": [
+							"At 3rd level, your studies and magical talents make you quick to remember arcane tools of battle. You have advantage on Intelligence checks you make to recall information about magical weapons and armor."
+						]
+					},
+					{
+						"name": "Swordmage Archetype",
+						"entries": [
+							"When you reach 3rd level, you choose an archetype that reflects your training: Crimson Knight, Duplicitist, Elementalist, Guardian, Inquisitor, Meteor Knight, or Scholar. Your choice grants you features at 3rd level and again at 7th, 15th, and 20th level.",
+							{
+								"name": "Archetype Spells",
+								"entries": [
+									"Each archetype has a list of associated spells. Each spell counts as a swordmage spell for you, but it doesn't count against the number of swordmage spells you know."
+								]
+							}
+						],
+						"gainSubclassFeature": true
+					}
+				],
+				[
+					{
+						"name": "Ability Score Improvement",
+						"entries": [
+							"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+						]
+					}
+				],
+				[
+					{
+						"name": "Blade Magic",
+						"entries": [
+							"Starting at 5th level, when you use your action to cast a cantrip, you can make one weapon attack as a bonus action."
+						]
+					}
+				],
+				[
+					{
+						"name": "Pierce Defenses",
+						"entries": [
+							"At 6th level, you can empower your blade to weaken a foe's magical wards. When you hit a creature with a melee weapon attack, you can cause the creature to have disadvantage on saving throws it makes against spells you cast before the end of your next turn.",
+							"You can use this feature a number of times per long rest equal to your Intelligence modifier (a minimum of once)."
+						]
+					}
+				],
+				[
+					{
+						"name": "Swordmage Archetype Feature",
+						"entries": [
+							"At 7th level, you gain a feature granted to you by your Swordmage Archetype."
+						],
+						"gainSubclassFeature": true
+					}
+				],
+				[
+					{
+						"name": "Ability Score Improvement",
+						"entries": [
+							"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+						]
+					}
+				],
+				[],
+				[
+					{
+						"name": "Flexible Aegis",
+						"entries": [
+							"When you reach 10th level, you can readily change your Aegis with your magic. While your Aegis is active, you can freely switch between the type of Aegis you're using. Doing so uses a bonus action.",
+							"Alternatively, when you cast a spell of 1st level or higher on your turn with your Aegis activated, you can switch your Aegis type as part of the same action used to cast the spell."
+						]
+					}
+				],
+				[
+					{
+						"name": "Greater Blade Magic",
+						"entries": [
+							"Starting at 11th level, when you use your action to cast a spell, you can make one weapon attack as a bonus action."
+						]
+					}
+				],
+				[
+					{
+						"name": "Ability Score Improvement",
+						"entries": [
+							"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+						]
+					}
+				],
+				[],
+				[
+					{
+						"name": "Dual Aegis",
+						"entries": [
+							"By 14th level, you can blend the powers of your Aegis together. When you activate your Aegis, you can activate two Aegis types by spending two uses of your Aegis. You gain the benefits of both Aegis types. If you switch Aegis types later, then you choose which type to switch from.",
+							"Once you use this feature, you must finish a long rest before using it again."
+						]
+					}
+				],
+				[
+					{
+						"name": "Swordmage Archetype Feature",
+						"entries": [
+							"At 15th level, you gain a feature granted to you by your Swordmage Archetype."
+						],
+						"gainSubclassFeature": true
+					}
+				],
+				[
+					{
+						"name": "Ability Score Improvement",
+						"entries": [
+							"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+						]
+					}
+				],
+				[],
+				[
+					{
+						"name": "Rapid Aegis",
+						"entries": [
+							"At 18th level, you flawlessly blend your swordplay and magic. When you use your bonus action to make a weapon attack with Blade Magic or Greater Blade Magic, you can use that same bonus action to activate your Aegis or switch your Aegis type with Flexible Aegis."
+						]
+					}
+				],
+				[
+					{
+						"name": "Ability Score Improvement",
+						"entries": [
+							"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+							"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+						]
+					}
+				],
+				[
+					{
+						"name": "Swordmage Archetype Feature",
+						"entries": [
+							"At 20th level, you gain a feature granted to you by your Swordmage Archetype."
+						],
+						"gainSubclassFeature": true
+					}
+				]
+			],
+			"subclassTitle": "Swordmage Archetype",
+			"subclasses": [
+				{
+					"name": "Crimson Knight Archetype",
+					"source": "SwMage",
+					"shortName": "Crimson Knight",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Crimson Knight Archetype",
+								"entries": [
+									"By becoming a Crimson Knight, you focus your studies on necromancy and the terrifying art of blood magic. Crimson Knights are often feared for their dark magic, but not all these swordmages are evil: some use blood magic to achieve noble goals, while other knights ruthlessly bend others to their will.",
+									{
+										"name": "Aegis Expansion",
+										"entries": [
+											"When you take this archetype at 3rd level, you gain a new type of Aegis:",
+											{
+												"type": "entries",
+												"entries": [
+													{
+														"type": "entries",
+														"name": "Aegis of Blood",
+														"entries": [
+															"When you regain hit points or gain temporary hit points while this Aegis is active, you gain extra points equal to your Aegis Die."
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Archetype Spells",
+										"entries": [
+											"You gain archetype spells at the swordmage levels listed below.",
+											{
+												"type": "table",
+												"caption": "Crimson Knight Spells",
+												"colLabels": [
+													"Swordmage Level",
+													"Spell"
+												],
+												"colStyles": [
+													"col-3 text-center",
+													"col-9"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell cause fear|XGE}"
+													],
+													[
+														"5th",
+														"{@spell hold person}"
+													],
+													[
+														"9th",
+														"{@spell vampiric touch}"
+													],
+													[
+														"13th",
+														"{@spell bleeding strike|SwMage}"
+													],
+													[
+														"17th",
+														"{@spell enervation|XGE}"
+													]
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Blood Sense",
+										"entries": [
+											"At 3rd level, you can feel the flowing blood of nearby beings. As an action, you can open your awareness to detect living creatures surrounding you. Until the end of your next turn, you know the location of any living creature within 60 feet of you that is not behind total cover. You also sense if any creature is below its hit point maximum and if any creature is poisoned or diseased.",
+											"You can use this feature a number of times equal to 1 + your Intelligence modifier. When you finish a long rest, you regain all expended uses."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Puppet",
+										"entries": [
+											"Starting at 7th level, your blood magic can subtly influence the movements of those around you. When you see a creature within 30 feet of you make an attack roll, ability check, or saving throw, you can use your reaction to impose disadvantage on the roll. This feature does not work on undead or constructs.",
+											"Once you use this feature, you must finish a short or long rest before using it again."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Blood Recall",
+										"entries": [
+											"When you reach 15th level, you can sacrifice your own vitality to augment your magical energy. As an action, you can expend up to half of your Hit Dice (rounding down). You recover spell slots with a combined level equal to the number of Hit Dice you spent.",
+											"Once you use this feature, you must finish a long rest before using it again."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Crimson Lord",
+										"entries": [
+											"Beginning at 20th level, you unleash necromantic energy around yourself to drain life from your foes. As a bonus action (or as part of the bonus action used to activate your Aegis), you create a 15-foot aura around yourself. Any creature of your choosing that starts their turn inside your aura takes 4d8 necrotic damage. You regain hit points equal to half the damage taken.",
+											"This aura lasts for 1 minute. Once you use this feature, you must finish a long rest before using it again."
+										]
+									}
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Duplicitist Archetype",
+					"source": "SwMage",
+					"shortName": "Duplicitist",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Duplicitist Archetype",
+								"entries": [
+									"By choosing the Duplicitist archetype, you weave together illusions and enchantments, becoming both illusive and elusive. Duplicitist swordmages can be deadly assassions, admirers of the fey, cunning warriors, or general mischief-makers.",
+									{
+										"name": "Aegis Expansion",
+										"entries": [
+											"When you take this archetype at 3rd level, you gain a new type of Aegis:",
+											{
+												"type": "entries",
+												"entries": [
+													{
+														"type": "entries",
+														"name": "Aegis of Deception",
+														"entries": [
+															"As a bonus action, you can activate this Aegis to become invisible until the end of your turn. For the duration of this Aegis, you can use your bonus action to gain the same benefit. The invisibility granted from your Aegis ends early if you attack or cast a spell.",
+															"Once you reach 11th level, the invisibility lasts until the end of your next turn and does not end early when attacking or spellcasting."
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Archetype Spells",
+										"entries": [
+											"You gain archetype spells at the swordmage levels listed below.",
+											{
+												"type": "table",
+												"caption": "Duplicitist Spells",
+												"colLabels": [
+													"Swordmage Level",
+													"Spell"
+												],
+												"colStyles": [
+													"col-3 text-center",
+													"col-9"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell disguise self}"
+													],
+													[
+														"5th",
+														"{@spell mirror image}"
+													],
+													[
+														"9th",
+														"{@spell enemies abound|XGE}"
+													],
+													[
+														"13th",
+														"{@spell phantasmal killer}"
+													],
+													[
+														"17th",
+														"{@spell mislead}"
+													]
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Cunning Trickery",
+										"entries": [
+											"By 3rd level, you are adept at tricking others. You know the {@spell minor illusion} cantrip, and you become proficient in either {@skill Deception} or {@skill Stealth}."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Sly Mind",
+										"entries": [
+											"When you reach 7th level, you learn how to use arcane knowledge to aid in your subterfuge. When you make a skill check using the proficiency you gained from your Cunning Trickery feature, you gain a bonus to the check equal to your Intelligence modifier (a minimum of 1).",
+											"Your experience with deceptive magic also causes you to gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Charisma saving throws."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Illusive Escape",
+										"entries": [
+											"Starting at 15th level, you escape from danger without anyone noticing. When you take damage, you can turn invisible and teleport up to 30 feet away to an unoccupied space that you can see, leaving behind an illusory image of yourself. The image has an armor class equal to 12 + your Dexterity modifier and is destroyed if damaged in any way. The image and your invisibility last until the start of your next turn.",
+											"Once you use this feature, you must finish a short or long rest before using it again."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Double Trouble",
+										"entries": [
+											"At 20th level, you weave shadows together to create a near copy of yourself. You can use your action to create a shadowy duplicate of yourself as if you had cast the {@spell simulacrum} spell. The duplicate follows the details listed in {@spell simulacrum}, except it has shadowy versions of your equipment, and its AC is equal to 12 + your Dexterity modifier.",
+											"The shadowy duplicate fades away after 1 minute or once it falls to 0 hit points. Once you use this feature, you must finish a long rest before using it again."
+										]
+									}
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Elementalist Archetype",
+					"source": "SwMage",
+					"shortName": "Elementalist",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Elementalist Archetype",
+								"entries": [
+									"Swordmages of the Elementalist archetype specialize in extraplanar magic. These swordmages harness the power of elemental chaos to become mortal embodiements of the elements.",
+									"Choose one of the four elements: Water, Earth, Fire or Air. This element becomes your Elemental Attunement. The Elemental Attunement you choose is reflected by the features you gain at this level.",
+									{
+										"name": "Aegis Expansion",
+										"entries": [
+											"When you take this archetype at 3rd level, you gain a new type of Aegis:",
+											{
+												"type": "entries",
+												"entries": [
+													{
+														"type": "entries",
+														"name": "Aegis of Elements",
+														"entries": [
+															"While this Aegis is active, attacks made with your Arcane Weapon deal extra damage equal to your Aegis Die. The damage type is determined by your Elemental Attunement."
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"name": "Water",
+										"entries": [
+											"You attune to the elemental plane of water. Your Aegis of Elements damage type is cold.",
+											{
+												"type": "entries",
+												"name": "Elemental Attunement Spells",
+												"entries": [
+													"You learn the {@spell shape water|XGE} cantrip. You also gain archetype spells at the swordmage levels listed below.",
+													{
+														"type": "table",
+														"caption": "Water Elementalist Spells",
+														"colLabels": [
+															"Swordmage Level",
+															"Spell"
+														],
+														"colStyles": [
+															"col-3 text-center",
+															"col-9"
+														],
+														"rows": [
+															[
+																"3rd",
+																"{@spell armor of agathys}"
+															],
+															[
+																"5th",
+																"{@spell misty step}"
+															],
+															[
+																"9th",
+																"{@spell tidal wave|XGE}"
+															],
+															[
+																"13th",
+																"{@spell control water}"
+															],
+															[
+																"17th",
+																"{@spell maelstrom|XGE}"
+															]
+														]
+													}
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Elemental Studies",
+												"entries": [
+													"Starting at 3rd level, you can speak, read, and write Primordial. You also can speak Aquan, the Primordial dialect associated with the plane of water. You have advantage on Intelligence ({@skill Investigation}) checks made to investigate elementals, as well as any Intelligence checks made to recall information about elementals and their planes of existence."
+												]
+											}
+										]
+									},
+									{
+										"name": "Earth",
+										"entries": [
+											"You attune to the elemental plane of earth. Your Aegis of Elements damage type matches the damage type of your Arcane Weapon.",
+											{
+												"type": "entries",
+												"name": "Elemental Attunement Spells",
+												"entries": [
+													"You learn the {@spell mold earth|XGE} cantrip. You also gain archetype spells at the swordmage levels listed below.",
+													{
+														"type": "table",
+														"caption": "Earth Elementalist Spells",
+														"colLabels": [
+															"Swordmage Level",
+															"Spell"
+														],
+														"colStyles": [
+															"col-3 text-center",
+															"col-9"
+														],
+														"rows": [
+															[
+																"3rd",
+																"{@spell earth tremor|XGE}"
+															],
+															[
+																"5th",
+																"{@spell maximilian's earthen grasp|XGE}"
+															],
+															[
+																"9th",
+																"{@spell erupting earth|XGE}"
+															],
+															[
+																"13th",
+																"{@spell quaking swordburst|SwMage}"
+															],
+															[
+																"17th",
+																"{@spell transmute rock|XGE}"
+															]
+														]
+													}
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Elemental Studies",
+												"entries": [
+													"Starting at 3rd level, you can speak, read, and write Primordial. You also can speak Terran, the Primordial dialect associated with the plane of earth. You have advantage on Intelligence ({@skill Investigation}) checks made to investigate elementals, as well as any Intelligence checks made to recall information about elementals and their planes of existence."
+												]
+											}
+										]
+									},
+									{
+										"name": "Fire",
+										"entries": [
+											"You attune to the elemental plane of fire. Your Aegis of Elements damage type is fire.",
+											{
+												"type": "entries",
+												"name": "Elemental Attunement Spells",
+												"entries": [
+													"You learn the {@spell control flames|XGE} cantrip. You also gain archetype spells at the swordmage levels listed below.",
+													{
+														"type": "table",
+														"caption": "Fire Elementalist Spells",
+														"colLabels": [
+															"Swordmage Level",
+															"Spell"
+														],
+														"colStyles": [
+															"col-3 text-center",
+															"col-9"
+														],
+														"rows": [
+															[
+																"3rd",
+																"{@spell searing smite}"
+															],
+															[
+																"5th",
+																"{@spell scorching ray}"
+															],
+															[
+																"9th",
+																"{@spell flaming swordburst|SwMage}"
+															],
+															[
+																"13th",
+																"{@spell fiery charge|SwMage}"
+															],
+															[
+																"17th",
+																"{@spell immolation|XGE}"
+															]
+														]
+													}
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Elemental Studies",
+												"entries": [
+													"Starting at 3rd level, you can speak, read, and write Primordial. You also can speak Ignan, the Primordial dialect associated with the plane of fire. You have advantage on Intelligence ({@skill Investigation}) checks made to investigate elementals, as well as any Intelligence checks made to recall information about elementals and their planes of existence."
+												]
+											}
+										]
+									},
+									{
+										"name": "Air",
+										"entries": [
+											"You attune to the elemental plane of air. Your Aegis of Elements damage type is lightning.",
+											{
+												"type": "entries",
+												"name": "Elemental Focus Spells",
+												"entries": [
+													"You learn the {@spell gust|XGE} cantrip. You also gain archetype spells at the swordmage levels listed below.",
+													{
+														"type": "table",
+														"caption": "Air Elementalist Spells",
+														"colLabels": [
+															"Swordmage Level",
+															"Spell"
+														],
+														"colStyles": [
+															"col-3 text-center",
+															"col-9"
+														],
+														"rows": [
+															[
+																"3rd",
+																"{@spell thunderous smite}"
+															],
+															[
+																"5th",
+																"{@spell warding wind|XGE}"
+															],
+															[
+																"9th",
+																"{@spell lightning bolt}"
+															],
+															[
+																"13th",
+																"{@spell storm sphere|XGE}"
+															],
+															[
+																"17th",
+																"{@spell control winds|XGE}"
+															]
+														]
+													}
+												]
+											},
+											{
+												"type": "entries",
+												"name": "Elemental Studies",
+												"entries": [
+													"Starting at 3rd level, you can speak, read, and write Primordial. You also can speak Auran, the Primordial dialect associated with the plane of air. You have advantage on Intelligence ({@skill Investigation}) checks made to investigate elementals, as well as any Intelligence checks made to recall information about elementals and their planes of existence."
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Planar Affinity",
+										"entries": [
+											"Starting at 7th level, you gain one of the following features, depending on your Elemental Attunement:",
+											{
+												"type": "entries",
+												"entries": [
+													{
+														"type": "entries",
+														"name": "Water",
+														"entries": [
+															"You gain a swimming speed equal to your walking speed and can breathe underwater. You also gain resistance to cold and fire damage."
+														]
+													},
+													{
+														"type": "entries",
+														"name": "Earth",
+														"entries": [
+															"Your hit point maximum increases by 7, and it increases by 1 whenever you gain a level in this class. Additionally, whenever you make a Strength ({@skill Athletics}) check, you gain a bonus to the check equal to your Intelligence modifier (a minimum of 1)."
+														]
+													},
+													{
+														"type": "entries",
+														"name": "Fire",
+														"entries": [
+															"Whenever you roll fire damage for a spell you cast, the roll gains a bonus equal to your Intelligence modifier."
+														]
+													},
+													{
+														"type": "entries",
+														"name": "Air",
+														"entries": [
+															"You gain proficiency in Dexterity saving throws, and your speed increases by 10 feet."
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Greater Planar Affinity",
+										"entries": [
+											"When you reach 15th level, your affinity to the elemental planes grows ever stronger. You gain one of the following features, depending on your Elemental Attunement:",
+											{
+												"type": "entries",
+												"entries": [
+													{
+														"type": "entries",
+														"name": "Water",
+														"entries": [
+															"When you activate your Aegis of Elements, you become engulfed in icy mist. The area in a 15-foot radius surrounding you becomes lightly obscured and is difficult terrain for all other creatures for the duration of your Aegis."
+														]
+													},
+													{
+														"type": "entries",
+														"name": "Earth",
+														"entries": [
+															"Your Aegis rivals the toughness of mountains. When you activate your Aegis of Elements, you gain temporary hit points equal to your Aegis Die plus your Swordmage level that last for the duration of your Aegis."
+														]
+													},
+													{
+														"type": "entries",
+														"name": "Fire",
+														"entries": [
+															"While your Aegis of Elements is active, you ignore other creatures' resistance to fire damage, and you treat immunity to fire damage as resistance."
+														]
+													},
+													{
+														"type": "entries",
+														"name": "Air",
+														"entries": [
+															"While your Aegis of Elements is active, when you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail."
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Elemental Aspect",
+										"entries": [
+											"At 20th level, your arcane studies reach a peak, and you become an aspect of your chosen element. You gain one of the following features, depending on your Elemental Attunement:",
+											{
+												"type": "entries",
+												"entries": [
+													{
+														"type": "entries",
+														"name": "Water",
+														"entries": [
+															"You are permanently under the effects of the {@spell freedom of movement} spell.",
+															"When you damage a creature with your Enspell Blade feature, they are knocked {@condition prone}, as if struck by a wave."
+														]
+													},
+													{
+														"type": "entries",
+														"name": "Earth",
+														"entries": [
+															"You are permanently under the effects of the {@spell stoneskin} spell without requiring concentration.",
+															"When you damage a creature with your Enspell Blade feature, their speed is reduced to zero until the start of your next turn, as the earth molds to inhibit their movement."
+														]
+													},
+													{
+														"type": "entries",
+														"name": "Fire",
+														"entries": [
+															"You are permanently under the effects of the {@spell fire shield} spell (using the \"warm shield\" option).",
+															"When you damage a creature with your Enspell Blade feature, the target is {@condition blinded} until the start of your next turn, as bright flames overload their senses."
+														]
+													},
+													{
+														"type": "entries",
+														"name": "Air",
+														"entries": [
+															"You are permanently under the effects of the {@spell blur} spell without requiring concentration, and you gain a flying speed equal to double your walking speed.",
+															"When you damage a creature with your Enspell Blade feature, you create a powerful gust of wind that pushes the target up to 20 feet in any direction."
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Guardian Archetype",
+					"source": "SwMage",
+					"shortName": "Guardian",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Guardian Archetype",
+								"entries": [
+									"By choosing the guardian archetype, a swordmage devotes themself to protecting their allies from harm. Guardians often serve as elite guards for monarchs or as wandering swordsmen who defend the innocent.",
+									{
+										"name": "Aegis Expansion",
+										"entries": [
+											"When you take this archetype at 3rd level, you gain a new type of Aegis:",
+											{
+												"type": "entries",
+												"entries": [
+													{
+														"type": "entries",
+														"name": "Aegis of Protection",
+														"entries": [
+															"When you activate this Aegis, you mark another creature within 30 feet of you. While this Aegis is active, if you see a creature within 30 feet of you target your marked creature with a melee attack, you can use your reaction to teleport to an unoccupied space within 5 feet of the attacker. You can then make one melee weapon attack with your Arcane Weapon against the attacker.",
+															"On later turns, you can use your bonus action to switch your mark to another creature within 30 feet of you."
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Archetype Spells",
+										"entries": [
+											"You gain archetype spells at the swordmage levels listed below.",
+											{
+												"type": "table",
+												"caption": "Guardian Spells",
+												"colLabels": [
+													"Swordmage Level",
+													"Spell"
+												],
+												"colStyles": [
+													"col-3 text-center",
+													"col-9"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell compelled duel}"
+													],
+													[
+														"5th",
+														"{@spell warding bond}"
+													],
+													[
+														"9th",
+														"{@spell life transference|XGE}"
+													],
+													[
+														"13th",
+														"{@spell dimensional vortex|SwMage}"
+													],
+													[
+														"17th",
+														"{@spell wall of force}"
+													]
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Vigiliant Defender",
+										"entries": [
+											"At 3rd level, your defensive training emphasizes sturdy protection and constant vigilance. You gain proficiency with heavy armor.",
+											"You also gain the ability to mark an area under your protection. You can cast the {@spell alarm} spell without expending a spell slot.",
+											"You can use this feature a number of times equal to 1 + your Intelligence modifier. When you finish a long rest, you regain all expended uses."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Bulwarking Magic",
+										"entries": [
+											"Starting at 7th level, when you target a friendly creatue with a spell or aid them with your Aegis of Protection, they gain temporary hit points equal to your Aegis Die + your Intelligence modifier (a minimum of 1)."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Defensive Swap",
+										"entries": [
+											"At 15th level, you can quickly switch places with an ally to place them out of danger. While your Aegis of Protection is active, as part of your reaction to teleport next to your marked creature's attacker, you can teleport your marked creature to your original location if they are willing."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Guardian Ward",
+										"entries": [
+											"When you reach 20th level, as a bonus action (or as part of the bonus action used to activate your Aegis), you can emanate abjuration magic in a 30-foot aura. You and all friendly creatures in the aura have advantage on saving throws against spells and other magical effects, and gain resistance to spell damage. Affected creatures also gain temporary hit points at the start of their turn equal to your Aegis Die + your Intelligence modifier (a minimum of 1).",
+											"This effect lasts for 1 minute. Once you use this feature, you must finish a long rest before using it again."
+										]
+									}
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Inquisitor Archetype",
+					"source": "SwMage",
+					"shortName": "Inquisitor",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Inquisitor Archetype",
+								"entries": [
+									"The inquisitor takes on the dangerous role of hunting and slaying evil arcane entities, be they wielders of dark magic or powerful otherworldly creatures. Inquisitors are equipped with ways to track, attack, and guard themselves from menacing foes.",
+									{
+										"name": "Aegis Expansion",
+										"entries": [
+											"When you take this archetype at 3rd level, you gain a new type of Aegis:",
+											{
+												"type": "entries",
+												"entries": [
+													{
+														"type": "entries",
+														"name": "Aegis of Negation",
+														"entries": [
+															"You can use this Aegis to shield yourself from dangerous foes. While Aegis of Negation is active, you gain a bonus to your saving throws equal to your Aegis Die."
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Archetype Spells",
+										"entries": [
+											"You gain archetype spells at the swordmage levels listed below.",
+											{
+												"type": "table",
+												"caption": "Inquisitor Spells",
+												"colLabels": [
+													"Swordmage Level",
+													"Spell"
+												],
+												"colStyles": [
+													"col-3 text-center",
+													"col-9"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell hunter's mark}"
+													],
+													[
+														"5th",
+														"{@spell detect thoughts}"
+													],
+													[
+														"9th",
+														"{@spell counterspell}"
+													],
+													[
+														"13th",
+														"{@spell banishment}"
+													],
+													[
+														"17th",
+														"{@spell scrying}"
+													]
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Eyes of the Inquisitor",
+										"entries": [
+											"At 3rd level, you can cast {@spell detect magic} without expending a spell slot.",
+											"You can use this feature a number of times equal to 1 + your Intelligence modifier. When you finish a long rest, you regain all expended uses."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Investigator's Insight",
+										"entries": [
+											"Beginning at 7th level, you have accrued a vast knowledge of supernatural entities. You have advantage on Intelligence checks to recall information about aberrations, celestials, fiends, fey, or undead.",
+											"Your shrewd mind lets you quickly analzye others. Whenever you make a Wisdom ({@skill Insight}) check, you gain a bonus to the check equal to your Intelligence modifier (a minimum of 1)."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Piercing Sight",
+										"entries": [
+											"Starting at 15th level, you can use your action to gain truesight up to a range of 60 feet for 10 minutes.",
+											"Once you use this feature, you must finish a short or long rest before using it again."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Antimagic Gaze",
+										"entries": [
+											"At 20th level, as a bonus action (or as part of the bonus action used to activate your Aegis), you can create an area of antimagic. This area is a 30-foot cone centered on yourself and has the effects of the {@spell antimagic field} spell. At the start of each of your turns, you decide which way the cone faces and whether the cone is active. You are unable to cast spells, but your Aegis of Negation and magical equipment function normally.",
+											"This effect lasts for 1 minute. Once you use this feature, you must finish a long rest before using it again."
+										]
+									}
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Meteor Knight Archetype",
+					"source": "SwMage",
+					"shortName": "Meteor Knight",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Meteor Knight Archetype",
+								"entries": [
+									"Swordmages that become Meteor Knights study the esoteric magic of dunamancy, specifically concerning the manipulation of gravity. Fascinated by celestial bodies, these swordmages are like shooting stars in their fiery and explosive fighting style.",
+									{
+										"name": "Aegis Expansion",
+										"entries": [
+											"When you take this archetype at 3rd level, you gain a new type of Aegis:",
+											{
+												"type": "entries",
+												"entries": [
+													{
+														"type": "entries",
+														"name": "Aegis of Gravity",
+														"entries": [
+															"While this Aeigis is active, you gain the ability to impose heavy gravitational force on others. When you see a creature within 30 feet of you begin to move, you can use your reaction to force the creature to make a Strength saving throw against your spell save DC. On a failure, the creature's speed drops to 0 for the rest of the turn."
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Archetype Spells",
+										"entries": [
+											"You gain archetype spells at the swordmage levels listed below.",
+											{
+												"type": "table",
+												"caption": "Meteor Knight Spells",
+												"colLabels": [
+													"Swordmage Level",
+													"Spell"
+												],
+												"colStyles": [
+													"col-3 text-center",
+													"col-9"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell magnify gravity|EGW}"
+													],
+													[
+														"5th",
+														"{@spell immovable object|EGW}"
+													],
+													[
+														"9th",
+														"{@spell melf's minute meteors|XGE}"
+													],
+													[
+														"13th",
+														"{@spell gravity sinkhole|EGW}"
+													],
+													[
+														"17th",
+														"{@spell destructive wave}"
+													]
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Student of the Stars",
+										"entries": [
+											"By 3rd level, you have gained the ability to manipulate the gravitational pull you experience. You gain proficiency with heavy armor and cartographer's tools, and you count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Defy Gravity",
+										"entries": [
+											"Starting at 7th level, your magical powers of dunamancy let you exceed your physical limits. You gain proficiency in Strength saving throws. If you already have this proficiency, you instead gain proficiency in Dexterity saving throws. You also have advantage on Strength and Dexterity saving throws made against effects that would push you or knock you prone."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Star Fall",
+										"entries": [
+											"At 15th level, you can magically hurtle your body into an area, creating a fiery explosion. As an action, you can teleport up to 120 feet to an unoccupied space you can see. Any creature within 20 feet of the space you teleport to must make a Strengh saving throw against your spell save DC. On a failure, a creature takes 4d6 fire damage and is knocked {@condition prone} and {@condition blinded}. On a success, a creature takes half damage and isn't knocked prone or blinded.",
+											"Once you use this feature, you must finish a short or long rest before using it again."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Gravitational Pull",
+										"entries": [
+											"Beginning at 20th level, as a bonus action (or as part of the bonus action used to activate your Aegis), you create a strong gravitational field which extends from you in a 30-foot radius. The area inside the aura is difficult terrain for creatures other than you. A creature that starts their turn inside the aura must make a Strength saving throw. On a failure, the creature is pulled into an unoccupied space adjacent to you.",
+											"This effect lasts for 1 minute. Once you use this feature, you must finish a long rest before using it again."
+										]
+									}
+								]
+							}
+						]
+					]
+				},
+				{
+					"name": "Scholar Archetype",
+					"source": "SwMage",
+					"shortName": "Scholar",
+					"subclassFeatures": [
+						[
+							{
+								"name": "Scholar Archetype",
+								"entries": [
+									"A swordmage who embodies the scholar archetype pours their soul into their studies, seeking to gain knowledge that will help them attain mastery of both magic and warfare.",
+									{
+										"name": "Aegis Expansion",
+										"entries": [
+											"When you take this archetype at 3rd level, you gain a new type of Aegis:",
+											{
+												"type": "entries",
+												"entries": [
+													{
+														"type": "entries",
+														"name": "Aegis of Spells",
+														"entries": [
+															"While this Aegis is active, any spell you cast is treated as if it were cast with a spell slot one level higher than the slot you used."
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Archetype Spells",
+										"entries": [
+											"You gain archetype spells at the swordmage levels listed below.",
+											{
+												"type": "table",
+												"caption": "Scholar Spells",
+												"colLabels": [
+													"Swordmage Level",
+													"Spell"
+												],
+												"colStyles": [
+													"col-3 text-center",
+													"col-9"
+												],
+												"rows": [
+													[
+														"3rd",
+														"{@spell ensnaring pull|SwMage}"
+													],
+													[
+														"5th",
+														"{@spell far strike|SwMage}"
+													],
+													[
+														"9th",
+														"{@spell blade storm|SwMage}"
+													],
+													[
+														"13th",
+														"{@spell dimensional vortex|SwMage}"
+													],
+													[
+														"17th",
+														"{@spell time-warp blade|SwMage}"
+													]
+												]
+											}
+										]
+									},
+									{
+										"type": "entries",
+										"name": "Swordmage Studies",
+										"entries": [
+											"By 3rd level, your knowledge of magic and swordplay is demonstrated in combat. When you attack with your Arcane Weapon, you can use your Intelligence modifier, rather than Strength or Dexterity, for the attack and damage rolls."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Tactical Knowledge",
+										"entries": [
+											"Beginning at 7th level, your knowledge of the flow of battle can benefit your allies as well as yourself. You can use the {@action Help} action as a bonus action. When you use the {@action Help} action to aid an ally in attacking a creature, the target of that attack can be within 30 feet of you, rather than within 5 feet of you, if the target can see or hear you."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Empowered Blade",
+										"entries": [
+											"Beginning at 15th level, whenever you deal extra force damage using your Enspell Blade or Spell Breaker features, you also gain temporary hit points equal to the number rolled on your Arcane Die."
+										]
+									}
+								]
+							}
+						],
+						[
+							{
+								"entries": [
+									{
+										"type": "entries",
+										"name": "Magical Arcanum",
+										"entries": [
+											"At 20th level, your studies have reached their peak, allowing you to utilize magical knowledge thought to be impossible for a swordmage to master. Choose one {@filter 6th level spell|spells|level=6|class=Wizard} and one {@filter 7th level spell|spells|level=7|class=Wizard} from the wizard spell list. You can cast each of these spells once without expending a spell slot, and you regain the ability to do so after finishing a long rest."
+										]
+									}
+								]
+							}
+						]
+					]
+				}
+			],
+			"classSpells": [
+				"Blade Ward",
+				{
+					"name": "Booming Blade",
+					"source": "SCAG"
+				},
+				"Dancing Lights",
+				"Freezing Blade",
+				{
+					"name": "Green-Flame Blade",
+					"source": "SCAG"
+				},
+				"Light",
+				{
+					"name": "Lightning Lure",
+					"source": "SCAG"
+				},
+				"Mage Hand",
+				"Mending",
+				"Message",
+				"Poison Spray",
+				"Prestidigitation",
+				"Shocking Grasp",
+				{
+					"name": "Sword Burst",
+					"source": "SCAG"
+				},
+				{
+					"name": "Thunderclap",
+					"source": "XGE"
+				},
+				"True Strike",
+
+
+				{
+					"name": "Absorb Elements",
+					"source": "XGE"
+				},
+				"Burning Hands",
+				"Chromatic Orb",
+				"Color Spray",
+				"Expeditious Retreat",
+				"False Life",
+				"Feather Fall",
+				{
+					"name": "Ice Knife",
+					"source": "XGE"
+				},
+				"Identify",
+				"Jump",
+				"Longstrider",
+				"Mage Armor",
+				"Protection from Evil and Good",
+				"Shield",
+				"Thunderwave",
+				{
+					"name": "Zephyr Strike",
+					"source": "XGE"
+				},
+
+
+				{
+					"name": "Aganazzar's Scorcher",
+					"source": "XGE"
+				},
+				"Blindness/Deafness",
+				"Blur",
+				"Continual Flame",
+				"Darkness",
+				"Darkvision",
+				"Enlarge/Reduce",
+				"Invisibility",
+				"Magic Weapon",
+				"Misty Step",
+				"See Invisibility",
+				"Spider Climb",
+				{
+					"name": "Wristpocket",
+					"source": "EGW"
+				},
+
+
+				"Blink",
+				"Conjure Barrage",
+				"Counterspell",
+				"Dispel Magic",
+				"Elemental Weapon",
+				"Fear",
+				"Fly",
+				"Gaseous Form",
+				"Haste",
+				"Magic Circle",
+				"Phantom Steed",
+				{
+					"name": "Pulse Wave",
+					"source": "EGW"
+				},
+				"Protection from Energy",
+				"Slow",
+				{
+					"name": "Thunder Step",
+					"source": "XGE"
+				},
+
+
+				"Dimension Door",
+				{
+					"name": "Elemental Bane",
+					"source": "XGE"
+				},
+				"Fire Shield",
+				"Freedom of Movement",
+				"Greater Invisibility",
+				"Mordenkainen's Faithful Hound",
+				"Polymorph",
+				"Stoneskin",
+				"Wall of Fire",
+
+
+				"Circle of Power",
+				"Cone of Cold",
+				"Conjure Volley",
+				{
+					"name": "Far Step",
+					"source": "XGE"
+				},
+				"Legend Lore",
+				"Rary's Telepathic Bond",
+				{
+					"name": "Steel Wind Strike",
+					"source": "XGE"
+				},
+				"Telekinesis",
+				"Teleportation Circle"
+			]
+		}
+	],
+	"spell": [
+		{
+			"name": "Freezing Blade",
+			"source": "SwMage",
+			"page": 22,
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your weapon glows with ice-cold radiance as you strike your foe. As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects and has disadvantage on the next attack roll it makes before the end of its next turn.",
+				"This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra {@damage 1d8} cold damage to the target. The damage roll increase to {@damage 2d8} at 11th level and {@damage 3d8} at 17th level."
+			],
+			"scalingLevelDice": {
+				"label": "cold damage",
+				"scaling": {
+					"5": "1d8",
+					"11": "2d8",
+					"17": "3d8"
+				}
+			},
+			"damageInflict": [
+				"cold"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Mind Blade",
+			"source": "SwMage",
+			"page": 22,
+			"level": 0,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your weapon becomes empowered with deadly psychic force. As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and they subract a d4 from the next attack roll or saving throw they make before the end of their next turn.",
+				"This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra {@damage 1d8} psychic damage to the target. The damage roll increase to {@damage 2d8} at 11th level and {@damage 3d8} at 17th level."
+			],
+			"scalingLevelDice": {
+				"label": "psychic damage",
+				"scaling": {
+					"5": "1d8",
+					"11": "2d8",
+					"17": "3d8"
+				}
+			},
+			"damageInflict": [
+				"psychic"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Mountain Blade",
+			"source": "SwMage",
+			"page": 22,
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your body and blade become strengthened by the earth. As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and if the creature's size is large or smaller you push it up to 10 feet.",
+				"This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra {@damage 1d8} bludgeoning damage to the target. The damage roll increase to {@damage 2d8} at 11th level and {@damage 3d8} at 17th level."
+			],
+			"scalingLevelDice": {
+				"label": "psychic damage",
+				"scaling": {
+					"5": "1d8",
+					"11": "2d8",
+					"17": "3d8"
+				}
+			},
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Protective Blade",
+			"source": "SwMage",
+			"page": 12,
+			"level": 0,
+			"school": "A",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"When you strike a foe, you surround them with magic that lashes out if they attack your allies. As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and it becomes sheathed in abjuring energy until the start of your next turn. If the target willingly attacks a creature other than you before then, it immediately takes {@damage 1d8} force damage, and the spell ends.",
+				"At 5th level, the melee attack deals an extra {@damage 1d8} force damage to the target, and the damage the target takes for attacking another creature increases to {@damage 2d8}. Both damage rolls increase by 1d8 at 11th level and 17th level."
+			],
+			"scalingLevelDice": {
+				"label": "force damage",
+				"scaling": {
+					"5": "1d8",
+					"11": "2d8",
+					"17": "3d8"
+				}
+			},
+			"damageInflict": [
+				"bludgeoning"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Vampiric Blade",
+			"source": "SwMage",
+			"page": 22,
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You channel necrotic energy into your weapon to steal the lifeforce from your target. As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and you gain temporary hit points equal to your spellcasting modifier. The temporary hit points disappear at the start of your next turn.",
+				"This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra {@damage 1d8} necrotic damage to the target. The damage roll increase to {@damage 2d8} at 11th level and {@damage 3d8} at 17th level."
+			],
+			"scalingLevelDice": {
+				"label": "necrotic damage",
+				"scaling": {
+					"5": "1d8",
+					"11": "2d8",
+					"17": "3d8"
+				}
+			},
+			"damageInflict": [
+				"necrotic"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Corrosive Swordburst",
+			"source": "SwMage",
+			"page": 13,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You slam your blade into the ground and burning acid bursts forth around you. Any creature within the area must make a Dexterity saving throw. On a failed save, the creature takes {@damage 2d4} acid damage and another 2d4 acid damage at the end of its next turn. On a successful save, a creature takes half the initial damage and no damage at the end of its next turn."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledamage 2d4|1-9|2d4} for each slot level above 2nd."
+					]
+				}
+			],
+			"damageInflict": [
+				"acid"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Ensnaring Pull",
+			"source": "SwMage",
+			"page": 22,
+			"level": 1,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"A foe is pulled through dimensional space to be struck by your blade. As an action, choose a creature within 30 feet of you. They must succeed a Charisma saving throw or be teleported to an unoccupied space adjacent to you. If they are teleported in this way, you can make one melee weapon attack against it. The spell fails if there is no unoccupied space adjacent to you."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. You make one melee weapon attack against each creature you pull in."
+					]
+				}
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Predictive Strike",
+			"source": "SwMage",
+			"page": 23,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You briefly glimpse into the future to see how your foe will react before they do. You have advantage on weapon attack rolls until this spell ends. Once you hit, your attack deals an additional {@damage 1d6} force damage and the spell ends."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Venemous Strike",
+			"source": "SwMage",
+			"page": 23,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"The next time you hit a creature with a weapon attack before this spell ends, you coat your weapon with toxic poison, and the attack deals an extra {@damage 1d6} poison damage to the target. Additionally, the target must succeed on a Constitution saving throw or be {@condition poisoned} until the spell ends.",
+				"At the end of each of its turns, the target can make another Constitution saving throw. On a success, the spell ends on the target."
+			],
+			"damageInflict": [
+				"poison"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Electrifying Swordburst",
+			"source": "SwMage",
+			"page": 14,
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Empowering your blade with crackling electricity, you hold your weapon aloft as lightning strikes out at your surrounding foes. Any creature within the area must make a Dexterity saving throw. On a failed save, the creature takes {@damage 3d8} lightning damage and it can't take reactions until the start of its next turn. On a successful save, the creature takes half as much damage and suffers no other effect. The creature has disadvantage on the saving throw if they are wearing armor made of metal."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledamage 3d8|2-9|1d8} for each slot level above 2nd."
+					]
+				}
+			],
+			"damageInflict": [
+				"lightning"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Far Strike",
+			"source": "SwMage",
+			"page": 23,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your blade creates a momentary portal near a distant foe to strike at them from afar. Choose a creature within 60 feet of you. You can make a melee weapon attack against this target, and it deals an extra 2d6 force damage."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledamage 2d6|2-9|1d6} and the range increases by 15 feet for each slot level above 2nd."
+					]
+				}
+			],
+			"damageInflict": [
+				"force"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Isolating Strike",
+			"source": "SwMage",
+			"page": 23,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with dimensional power, and the attack deals an extra {@damage 2d6} force damage to the target. Additionally, the target must succeed on a Charisma saving throw or be teleported to an unoccupied space up to 30 feet away from you."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Withering Strike",
+			"source": "SwMage",
+			"page": 23,
+			"level": 2,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with life draining energy, and the attack deals an extra {@damage 2d6} necrotic damage to the target. Additionally, the target must succeed on a Constitution saving throw or the target deals only half damage with weapon attacks that use Strength until the spell ends.",
+				"At the end of each of its turns, the target can make another Constitution saving throw. On a success, the spell ends on the target."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Blade Storm",
+			"source": "SwMage",
+			"page": 14,
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You swing your weapon, creating magical duplicates that strike at all foes. Each creature you choose within the area must make a Dexterity saving throw. A creature takes {@damage 6d6} force damage on a failed save, or half as much damage on a successful one."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledamage 6d6|3-9|1d6} for each slot level above 3rd."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Dimensional Retaliation",
+			"source": "SwMage",
+			"page": 24,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when you take damage from a ranged attack within 60 ft of you"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You teleport to an unoccupied space within 5 feet of the creature that attacked you. You can then make one melee weapon attack against the creature. On a hit, the attack deals an additional {@damage 3d8} force damage."
+			],
+			"damageInflict": [
+				"force"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Flaming Swordburst",
+			"source": "SwMage",
+			"page": 13,
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 20
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Raging fire bursts from your blade to engulf your foes in an inferno. Any creature within the area must make a Dexterity saving throw. On a failed save, the creature takes {@damage 4d8} fire damage and is burning. On a successful save, a creature takes half the damage and isn't burning. A creature that is burning takes {@damage 2d8} fire damage at the start of its turns. A creature can end the burning by using its action to pat out the flames."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledamage 4d8|3-9|1d8} for each slot level above 3rd."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Frigid Strike",
+			"source": "SwMage",
+			"page": 24,
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"The next time you hit a creature with a weapon attack before this spell ends, your weapon chills with elemental frost, and the attack deals an extra {@damage 3d8} cold damage to the target. Additionally, the target must succeed on a Constitution saving throw or be {@condition restrained} until the spell ends.",
+				"At the end of each of its turns, the target can make another Constitution saving throw. On a success, the spell ends on the target."
+			],
+			"damageInflict": [
+				"cold"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Bleeding Strike",
+			"source": "SwMage",
+			"page": 24,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"The next time you hit a creature with a weapon attack before this spell ends, your weapon darkens with necrotic power, and the attack deals an extra {@damage 4d8} necrotic damage to the target. The target must succeed on a Constitution saving throw have its hit point maximum reduced for 1 hour by an amount equal to the necrotic damage it took. Any effect that removes a disease allows a creature's hit point maximum to return to normal before that time passes.",
+				"At the end of each of its turns while this spell is active, the target repeats its saving throw. On a success, the spell ends. On a failure, it takes another {@damage 2d8} necrotic damage, and its hit point maximum is lowered by that amount."
+			],
+			"damageInflict": [
+				"necrotic"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Dimensional Vortex",
+			"source": "SwMage",
+			"page": 24,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "which you take when you see a creature within 30 feet of you attack you or a friendly creature"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You interrupt a creature's attack by warping space with your blade, causing your foe to appear a short distance away and unleash its attack elsewhere. The creature must succeed a Charisma saving throw or be teleported to an unoccupied space up to 60 feet away from their original location to an unoccupied space on solid ground. The creature then either makes their attack against another target of your choosing within range, or the attack is wasted."
+			],
+			"savingThrow": [
+				"charisma"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Fiery Charge",
+			"source": "SwMage",
+			"page": 15,
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"You hurl your blade and it transforms into a line of roaring fire 5 feet wide that extends out from you to a creature within range. Each creature in the line excluding you and the target must make a Dexterity saving throw, taking {@damage 4d8} fire damage on a failed save, and half as much damage on a successful one.",
+				"You then teleport to an unoccupied space within 5 feet of the target. The roaring flames transform back into your weapon and returns to your hand. You can then make one melee weapon attack against the target. On a hit, you deal an extra {@damage 4d8} fire damage."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"When you cast this spell using a spell slot of 5th level or higher, the damage increases by {@scaledamage 4d8|4-9|1d8} for each slot level above 4th."
+					]
+				}
+			],
+			"damageInflict": [
+				"fire"
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"areaTags": [
+				"L"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Quaking Swordburst",
+			"source": "SwMage",
+			"page": 15,
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You slam your weapon into the ground and seismic energy erupts from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. The area inside the aura is difficult terrain to everyone except you.",
+				"When the aura appears, each creature of your choice that is within the aura's area must succeed on a Dexterity saving throw or be knocked prone. Each creature of your choice that starts their turn in the aura must also make the same Dexterity saving throw."
+			],
+			"savingThrow": [
+				"dexterity"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Nightmare Swordburst",
+			"source": "SwMage",
+			"page": 16,
+			"level": 5,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "a weapon"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A powerful wave of terrifying visions burst from your blade as your foes see you as their worst nightmare. Each creature you choose within the area must make a Wisdom saving throw. On a failed save, the creature takes {@damage 6d8} psychic damage and is {@condition frightened} of you for the spell's duration. On a successful save, a creature takes half the damage and isn't {@condition frightened}.",
+				"At the end of each of its turns, a {@condition frightened} creature repeats the saving throw and the creature is no longer {@condition frightened} on a successful save."
+			],
+			"damageInflict": [
+				"psychic"
+			],
+			"savingThrow": [
+				"wisdom"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Shocking Blade",
+			"source": "SwMage",
+			"page": 24,
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"The next time you hit a creature with a weapon attack before this spell ends, you energize your blade with crackling electricity, and the attack deals an extra {@damage 5d10} lightning damage. Additionally, the creature must make a Constitution saving throw or be {@condition stunned} for the spell's duration.",
+				"At the end of each of its turns, the target can make another Constitution saving throw. On a success, the spell ends on the target."
+			],
+			"damageInflict": [
+				"lightning"
+			],
+			"savingThrow": [
+				"constitution"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Prismatic Blade",
+			"source": "SwMage",
+			"page": 16,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Your blade shimmers in multicolor light that entails destruction for your foes. Each time you hit a creature with a weapon attack before this spell ends, roll a {@dice d8} to determine which color affects it.",
+				{
+					"type": "table",
+					"caption": "Prismatic Blade",
+					"colLabels": [
+						"{@dice d8}",
+						"Damage Type"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 1
+								}
+							},
+							"Red: The creature takes an additional 4d6 fire damage."
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 2
+								}
+							},
+							"Orange: The creature takes an additional 4d6 acid damage."
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 3
+								}
+							},
+							"Yellow: The creature takes an additional 4d6 lightning damage."
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 4
+								}
+							},
+							"Green: The creature takes an additional 4d6 poison damage."
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 5
+								}
+							},
+							"Blue: The creature takes an additional 4d6 cold damage."
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 6
+								}
+							},
+							"Indigo: The creature must make a Constistution saving throw or be {@condition restrained} until the end of your next turn."
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 7
+								}
+							},
+							"Violet: The creature must make a Constitution saving throw or be {@condition blinded} until the end of your next turn."
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 8
+								}
+							},
+							"Special: The creature is affected by two colors. Roll twice more, rerolling any 8."
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"fire",
+				"acid",
+				"lightning",
+				"poison",
+				"cold"
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		},
+		{
+			"name": "Time-Warp Blade",
+			"source": "SwMage",
+			"page": 24,
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"You warp time around your blade to speed yourself up and catch glimpses of the immediate future. For the spell's duration, you have advantage on attack rolls, ability checks, and saving throws (except for Constitution saving throws to maintain concentration on this spell). Additionally, other creatures have disadvantage on attack rolls against you for the duration."
+			],
+			"classes": {
+				"fromClassList": [
+					{
+						"name": "Swordmage",
+						"source": "SwMage"
+					}
+				]
+			}
+		}
+	]
+}
